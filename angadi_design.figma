@@ -1,0 +1,218 @@
+{
+  "name": "Angadi Inventory Management",
+  "pages": [
+    {
+      "name": "Design System",
+      "layers": [
+        {
+          "type": "COLORS",
+          "values": [
+            {"name": "Primary", "value": "#2E8B57"},
+            {"name": "Secondary", "value": "#4682B4"},
+            {"name": "Background", "value": "#F5F5F5"},
+            {"name": "Text", "value": "#333333"},
+            {"name": "Accent", "value": "#FFA500"}
+          ]
+        },
+        {
+          "type": "TYPOGRAPHY",
+          "values": [
+            {"name": "Heading", "font": "Inter", "weight": "Bold", "sizes": [24, 20]},
+            {"name": "Body", "font": "Inter", "weight": "Regular", "size": 16},
+            {"name": "Caption", "font": "Inter", "weight": "Light", "size": 14}
+          ]
+        },
+        {
+          "type": "COMPONENTS",
+          "values": [
+            {"name": "Primary Button", "specs": "Height: 48px, Corner Radius: 8px"},
+            {"name": "Input Field", "specs": "Height: 56px, Padding: 16px"},
+            {"name": "Card", "specs": "Corner Radius: 12px, Elevation: 2"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auth Flow",
+      "layers": [
+        {
+          "type": "FRAME",
+          "name": "Phone Input",
+          "children": [
+            {
+              "type": "TEXT",
+              "content": "Enter Your Phone Number",
+              "style": "Heading",
+              "position": [24, 80]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Phone Input Field",
+              "position": [24, 120]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Primary Button",
+              "content": "Send OTP",
+              "position": [24, 200]
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "OTP Verification",
+          "children": [
+            {
+              "type": "TEXT",
+              "content": "Enter OTP",
+              "style": "Heading",
+              "position": [24, 80]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "OTP Input",
+              "position": [24, 120]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Primary Button",
+              "content": "Verify",
+              "position": [24, 200]
+            },
+            {
+              "type": "TEXT",
+              "content": "Resend OTP",
+              "style": "Caption",
+              "position": [24, 260]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "App Screens",
+      "layers": [
+        {
+          "type": "FRAME",
+          "name": "Home",
+          "children": [
+            {
+              "type": "TEXT",
+              "content": "Angadi",
+              "style": "Heading",
+              "position": [24, 40]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Stats Card",
+              "position": [24, 100],
+              "children": [
+                {"type": "TEXT", "content": "Total Items: 42", "style": "Body"},
+                {"type": "TEXT", "content": "Recent Bills: 5", "style": "Body"}
+              ]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "FAB",
+              "position": [360, 500],
+              "content": "Scan"
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "Scan Receipt",
+          "children": [
+            {
+              "type": "RECTANGLE",
+              "name": "Camera View",
+              "position": [0, 0],
+              "size": [414, 600]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Capture Button",
+              "position": [180, 500]
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "Bills List",
+          "children": [
+            {
+              "type": "COMPONENT",
+              "name": "Bill Card",
+              "position": [24, 80],
+              "children": [
+                {"type": "TEXT", "content": "2023-11-15", "style": "Body"},
+                {"type": "TEXT", "content": "₹1,245.00", "style": "Heading"}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "Inventory List",
+          "children": [
+            {
+              "type": "COMPONENT",
+              "name": "Inventory Item",
+              "position": [24, 80],
+              "children": [
+                {"type": "TEXT", "content": "Sugar (5kg)", "style": "Body"},
+                {"type": "TEXT", "content": "Qty: 12", "style": "Caption"},
+                {"type": "TEXT", "content": "₹450", "style": "Body"}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FRAME",
+          "name": "Item Detail",
+          "children": [
+            {
+              "type": "TEXT",
+              "content": "Sugar (5kg)",
+              "style": "Heading",
+              "position": [24, 40]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Stock Indicator",
+              "position": [24, 100],
+              "children": [
+                {"type": "TEXT", "content": "Current Stock: 12", "style": "Body"}
+              ]
+            },
+            {
+              "type": "COMPONENT",
+              "name": "Price History",
+              "position": [24, 180]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Component Library",
+      "layers": [
+        {
+          "type": "COMPONENT",
+          "name": "FAB",
+          "specs": "Diameter: 56px, Elevation: 6, Primary color"
+        },
+        {
+          "type": "COMPONENT",
+          "name": "Bill Card",
+          "specs": "Width: 100%-48px, Padding: 16px, Elevation: 1"
+        },
+        {
+          "type": "COMPONENT",
+          "name": "Inventory Item",
+          "specs": "Height: 64px, Padding: 16px"
+        }
+      ]
+    }
+  ]
+}
